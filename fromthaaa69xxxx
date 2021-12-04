@@ -1,0 +1,238 @@
+getgenv().all = false
+getgenv().opposingteam = false
+getgenv().yourteam = false
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SIX PATHS", "DarkTheme")
+
+local Tab = Window:NewTab("MAINFRAME")
+local Camlocks = Window:NewTab("CAMLOCKS")
+local Section2 = Camlocks:NewSection("GOODS")
+local Section = Tab:NewSection("GOODS")
+local NEWMISC = Window:NewTab("MISC")
+
+local MISCC = NEWMISC:NewSection("SHIT")
+
+Section:NewButton("AUTOSCORE", "(B) GET CLOSE TO YOUR GOAL!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/imgayforlilnasx/abcdefgijhaks/main/lmao"))()
+end)
+Section:NewButton("AUTO DEFENSE", "(Z)", function()
+   game.Workspace.FX.Basketball.Name = "Basketball2"
+local UIS = game:GetService('UserInputService')
+Holding = false
+UIS.InputBegan:connect(function(Input, GPE)
+    if not GPE and Input.KeyCode == Enum.KeyCode.Z then
+        Holding = true
+        for i  , v in pairs(workspace:GetDescendants()) do 
+    if v.Name == 'Basketball' then
+    local ts = game:GetService("TweenService")
+    local plr = game.Players.LocalPlayer
+    local char = plr.Character.HumanoidRootPart
+    local ti = TweenInfo.new(0.5,Enum.EasingStyle.Quad)
+    local tp = {CFrame = v.Handle.CFrame}
+    repeat 
+
+        wait(0.01)
+            ts:Create(char, ti, tp):Play()
+    until Holding == false
+    end
+    end
+    end
+end)
+
+UIS.InputEnded:connect(function(Input, GPE)
+    if not GPE and Input.KeyCode == Enum.KeyCode.Z then
+        Holding = false
+    end
+end)
+
+end)
+
+
+
+Section:NewButton("MAG", "(R)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/venturesomes/magnet/main/MAIN"))()
+end)
+Section2:NewButton("BOUNCE LOCK", "(X) GET CLOSE TO YOUR GOAL!", function()
+    local Camera = workspace.CurrentCamera
+Holding = false
+function findGoals()
+    for i, v in pairs(workspace:GetDescendants()) do
+        if v.Name == 'Goal' then
+            v.Parent = workspace
+        end
+    end
+end
+local function findClosestPart(position)
+    local closestPart, closestPartMagnitude
+    local tmpMagnitude
+    for i, v in pairs(workspace:GetChildren()) do
+        if v.Name == 'Goal' then
+            if closestPart then
+                tmpMagnitude = (position - v.Position).magnitude
+                if tmpMagnitude < closestPartMagnitude then
+                    closestPart = v
+                    closestPartMagnitude = tmpMagnitude
+                end
+            else
+                closestPart = v
+                closestPartMagnitude = (position - v.Position).magnitude
+            end
+        end
+    end
+    return closestPart
+end
+findGoals()
+local UIS = game:GetService('UserInputService')
+UIS.InputBegan:connect(function(Input, GPE)
+    if not GPE and Input.KeyCode == Enum.KeyCode.X then
+        local lookthat = findClosestPart(game.Players.LocalPlayer.Character.Torso.Position)
+        Holding = true
+        repeat
+            wait(0.01)
+        Camera.CFrame = CFrame.new(Camera.CFrame.p, lookthat.Position + Vector3.new(0, 180, 0)) 
+        until Holding == false
+    end
+end)
+
+UIS.InputEnded:connect(function(Input, GPE)
+    if not GPE and Input.KeyCode == Enum.KeyCode.X then
+        Holding = false
+    end
+end)
+
+ I=0
+end)
+
+
+Section:NewButton("SPEED", "(LEFTCTRL)", function()
+  ShiftHeld = false
+local gcheck = true
+urspeed = -4 -- The lower it is the faster. So don't worry about it being minus 1
+
+
+function ChangeFaster(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.Minus and gameProcessedEvent == false then        
+urspeed = urspeed - 0.1
+    end
+end
+ 
+
+
+function ChangeSlower(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.Equals and gameProcessedEvent == false then        
+urspeed = urspeed + 0.1
+    end
+end
+ 
+
+
+function GChecker(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.K and gameProcessedEvent == false then        
+if gcheck == false then
+gcheck = true
+elseif gcheck == true then
+gcheck = false
+end
+
+    end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(GChecker)
+
+
+
+function PressShift(inputObject,gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.LeftControl and gameProcessedEvent == false and gcheck == true then
+        ShiftHeld = true
+    end
+end
+
+function ReleaseShift(inputObject,gameProcessed)
+    if inputObject.KeyCode == Enum.KeyCode.LeftControl then
+        ShiftHeld = false
+    end
+end
+
+game:GetService("UserInputService").InputBegan:connect(PressShift)
+game:GetService("UserInputService").InputEnded:connect(ReleaseShift)
+game:GetService("UserInputService").InputBegan:connect(ChangeFaster)
+game:GetService("UserInputService").InputBegan:connect(ChangeSlower)
+
+
+game:GetService('RunService').Stepped:connect(function()
+if ShiftHeld == true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,urspeed)
+end
+end)
+end)
+
+Section:NewButton("NOSTEAL", "(N)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/imgayforlilnasx/hophop/main/lmaoloser"))()
+    local UIS = game:GetService('UserInputService')
+local plr = game.Players.LocalPlayer
+local Char = plr.Character or plr.CharacterAdded:Wait()
+local Key = 'N'
+UIS.InputBegan:Connect(function(Input, IsTyping)
+if IsTyping then return end
+local KeyPressed = Input.KeyCode
+if KeyPressed == Enum.KeyCode[Key] then
+game.Players.LocalPlayer.Character.Basketball.ToolTip:Destroy()
+end
+end)
+end)
+
+Section:NewToggle("Jump Team", "Jumps your team when you have ball(U)", function(state)
+    if state then
+        getgenv().yourteam = true
+    else
+        getgenv().yourteam = false
+    end
+end)
+
+Section:NewToggle("Jump Opposing Team", "Jumps opposing team when you have ball(U)", function(state)
+    if state then
+        getgenv().opposingteam = true
+    else
+        getgenv().opposingteam = false
+    end
+end)
+
+Section:NewToggle("Jump All", "Jumps every team when you have ball(U)", function(state)
+    if state then
+        getgenv().all = true
+    else
+        getgenv().all = false
+    end
+end)
+
+MISCC:NewKeybind("CLOSE UI", "(Y)", Enum.KeyCode.Y, function()
+	Library:ToggleUI()
+end)
+
+MISCC:NewButton("REJOIN", "(Rejoins Server", function()
+    local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(game.PlaceId, p)
+end)
+
+MISCC:NewButton("RESET", "Resets your character.", function()
+game:GetService("Players").LocalPlayer.Character.Head:Destroy()
+end)
+
+MISCC:NewButton("BACK TO LOBBY", "Teleports you to lobby.", function()
+    local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(623694595, p)
+end)
+
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/imgayforlilnasx/hophop/main/lmaoloser"))()
