@@ -14,7 +14,7 @@ local NEWMISC = Window:NewTab("MISC")
 local MISCC = NEWMISC:NewSection("SHIT")
 
 Section:NewButton("AUTOSCORE", "(B) GET CLOSE TO YOUR GOAL!", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/imgayforlilnasx/abcdefgijhaks/main/lmao"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/Durango/main/hellnight"))()
 end)
 Section:NewButton("AUTO DEFENSE", "(Z)", function()
    game.Workspace.FX.Basketball.Name = "Basketball2"
@@ -51,7 +51,7 @@ end)
 
 
 Section:NewButton("MAG", "(R)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/venturesomes/magnet/main/MAIN"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/Durango/main/mustangmache"))()
 end)
 Section2:NewButton("BOUNCE LOCK", "(X) GET CLOSE TO YOUR GOAL!", function()
     local Camera = workspace.CurrentCamera
@@ -168,7 +168,7 @@ end)
 end)
 
 Section:NewButton("NOSTEAL", "(N)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/imgayforlilnasx/hophop/main/lmaoloser"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/Durango/main/pooshiesty"))()
     local UIS = game:GetService('UserInputService')
 local plr = game.Players.LocalPlayer
 local Char = plr.Character or plr.CharacterAdded:Wait()
@@ -235,4 +235,4 @@ ts:Teleport(623694595, p)
 end)
 
 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/imgayforlilnasx/hophop/main/lmaoloser"))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/Durango/main/pooshiesty"))()
