@@ -1,0 +1,11 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/reapersrevenge/main/neroversace"))()
+
+if game.placeId == 3323729375 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/reapersrevenge/main/popwarners"))()
+end
+if game.placeId == 4923146720 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/reapersrevenge/main/popwarnerb"))()
+end
+if game.placeId == 6229116934 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/reapersrevenge/main/popwarnerhoo"))()
+end
