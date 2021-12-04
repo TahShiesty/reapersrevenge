@@ -1,0 +1,79 @@
+
+
+local check = Instance.new("BoolValue", game)
+check.Name = "?"
+
+if game["?"].Value == false then
+game:GetService'StarterGui':SetCore('SendNotification', {
+    Title = 'OCM HUB',
+    Text = 'Please wait for the gui to bypass anti cheats!',
+    Duration = 5
+  })
+
+  wait(2)
+  --bypass
+  game["?"].Value = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/Durango/main/fordzz"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TahShiesty/Durango/main/fordjrz"))()
+
+local folder = Instance.new("Folder", game.StarterGui)
+    folder.Name = "Nigger"
+    local archval = Instance.new("BoolValue", folder)
+    archval.Name = "LOL"
+    local NIG = Instance.new("BoolValue", folder)
+    NIG.Name = "LOLL"
+    local troll = Instance.new("BoolValue", folder)
+    troll.Name = "LMAO"
+
+--bypassed
+
+  game:GetService'StarterGui':SetCore('SendNotification', {
+    Title = 'Bypassed!',
+    Text = 'MORE BYPASSES COMING SOON!',
+    Duration = 5
+  })
+  wait(1)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Orochimaru's Curse Mark", "DarkTheme")
+
+--MAIN
+
+local camlocks = Window:NewTab("camlocks")
+local cheats = Window:NewTab("cheats")
+local miscellaneous = Window:NewTab("miscellaneous")
+local PlayerSection = camlocks:NewSection("camlocks")
+local misc = miscellaneous:NewSection("MISC")
+local cheatss = cheats:NewSection("OPTIONS")
+local Portals = Window:NewTab("Portals")
+local PortalConfiguration = Portals:NewSection("OPTIONS")
+--func
+PlayerSection:NewToggle("85 ARCH", "Toggles camlock to hit 85 arch shots.(PRESS X)", function(state)
+    if state then
+        game:GetService("StarterGui").Nigger.LOL.Value = true
+    else
+        game:GetService("StarterGui").Nigger.LOL.Value = false
+    end
+end)
+
+PlayerSection:NewToggle("75", "Toggles camlock to hit 75/85 shots. (PRESS X)", function(state)
+    if state then
+        game:GetService("StarterGui").Nigger.LOLL.Value = true
+    else
+        game:GetService("StarterGui").Nigger.LOLL.Value = false
+    end
+end)
+cheatss:NewSlider("WalkSpeed", "Toggles walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+cheatss:NewSlider("JumpPower", "Toggles walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+else
+    game:GetService'StarterGui':SetCore('SendNotification', {
+    Title = 'OCM HUB',
+    Text = 'OCM HUB was already executed. Rejoin if needed.',
+    Duration = 5
+  })
+end
